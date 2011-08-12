@@ -11,9 +11,7 @@ See ``` CONF['receiver']['hwm'] ``` in logzero.yml.
 Dependencies
 ==============
 
-```
-__gem install zeromq__ 
-```
+__ZeroMQ__: ``` gem install zeromq ```
 
 A  __MongoDB__ or __Redis__ database.
 
