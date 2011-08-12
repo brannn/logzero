@@ -10,8 +10,12 @@ See ``` CONF['receiver']['hwm'] ``` in logzero.yml.
  
 Dependencies
 ==============
- 
-A database.  __MongoDB__ and __Redis__ are supported.
+
+```
+__gem install zeromq__ 
+```
+
+A  __MongoDB__ or __Redis__ database.
 
 If you use Redis, the __redis__ and __ohm__ gems are required.
 If you use MongoDB, the __mongo__ gem is required.
