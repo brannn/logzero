@@ -3,7 +3,6 @@
 require 'zmq'
 require 'redis'
 require 'ohm'
-require 'ohm/contrib'
 require "./lib/apache.rb"
 
 CONF = YAML.load_file( 'logzero.yml' )
@@ -20,16 +19,15 @@ Ohm.connect(:host => CONF['redis']['ip'], \
             :db => CONF['redis']['db']) 
 
 class Request < Ohm::Model
-    include Ohm::Typecast
-
-    attribute :time, Time
+    
+    attribute :time
     attribute :host 
-    attribute :port, Integer
+    attribute :port
     attribute :type
     attribute :protocol
     attribute :url
-    attribute :size, Integer
-    attribute :state, Integer
+    attribute :size
+    attribute :state
     attribute :referrer
     attribute :unique
     attribute :ip
@@ -46,6 +44,7 @@ class Request < Ohm::Model
 end
 
 while true
+    
     log = s.recv(0)
     parser = Apache::Parser.new log
 
