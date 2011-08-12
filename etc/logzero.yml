@@ -1,0 +1,11 @@
+receiver:
+  ip: 10.10.10.1
+  port: 5555
+# high water mark: throw exception and block after this many msgs not pulled by upstream
+  hwm: 100000
+
+mongodb:
+  ip: 10.10.10.2
+  port: 27017
+  db: apache_log
+  coll: requests
