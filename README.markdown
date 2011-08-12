@@ -13,7 +13,7 @@ Dependencies
  
 A database.  __MongoDB__ and __Redis__ are supported.
 
-If you use Redis, the __redis,__ __ohm,__ and __ohm-contrib__ gems are required.
+If you use Redis, the __redis__ and __ohm__ gems are required.
 If you use MongoDB, the __mongo__ gem is required.
  
 __LogFormat__:
