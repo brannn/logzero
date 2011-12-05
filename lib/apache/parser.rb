@@ -1,4 +1,3 @@
-
 module Apache
 
     class Parser
