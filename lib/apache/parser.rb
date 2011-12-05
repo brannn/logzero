@@ -11,7 +11,7 @@ module Apache
             @host = str[0, colon]
             first_space = str.index(' ', colon)
             @port = str[colon + 1, first_space - colon - 1]
-  	 @unique = str[/[A-Za-z0-9@-]{24}/]
+  	     @unique = str[/[A-Za-z0-9@-]{24}/]
             @ip   = str[first_space + 1, str.index(' ', first_space + 1) - first_space - 1]
 
             first_bracket = str.index('[')
